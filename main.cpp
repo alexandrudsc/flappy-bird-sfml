@@ -83,7 +83,10 @@ int main()
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
-				window.close();
+			{
+			  std::cout << "Bye!\n";
+			  window.close();
+			}
 		}
 		///////////////////////////////////////////////////////////////////// here we wait for the user to press Space to start the game
 		while (!GameStart)
@@ -94,7 +97,11 @@ int main()
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
-				window.close();
+			{
+			  std::cout << "Bye :)\n";
+			  window.close();
+			  return 0;
+			}
 		}
 			window.clear();
 			window.draw(BackGroundSprite);
@@ -245,5 +252,5 @@ int main()
 		window.display();
 	}
 
-	return 0;
+	return 1;
 }
